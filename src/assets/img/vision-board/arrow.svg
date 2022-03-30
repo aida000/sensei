@@ -1,0 +1,9 @@
+<svg width="37" height="37" viewBox="0 0 37 37" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M9.344 8.042 3.958 2.656a.614.614 0 0 0-.868 0l-5.387 5.386a.614.614 0 0 0 0 .868l.434.434c.24.24.629.24.868 0l4.519-4.519 4.518 4.519c.24.24.628.24.868 0l.434-.434a.613.613 0 0 0 0-.868z" id="aue7wz3b6a"/>
+    </defs>
+    <g transform="matrix(-1 0 0 1 37 0)" fill="none" fill-rule="evenodd">
+        <circle fill="#FFF" cx="18.5" cy="18.5" r="18.5"/>
+        <use fill="#380B60" transform="matrix(0 1 1 0 12.524 15.476)" xlink:href="#aue7wz3b6a"/>
+    </g>
+</svg>

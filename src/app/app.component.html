@@ -1,0 +1,40 @@
+
+
+<div class="modal">
+	<div class="modelHeader">
+		<img src="./assets/img/second-block/blue_tree.png" alt=""	class="cover-bg">
+     
+   <h1 class="firstHeader">Add formations you followed</h1>
+   
+	</div>
+	<div class="defoultImage">
+		<div class="defImg"><img src="./assets/img/books/defimage.png"></div>
+    <div class="info">
+      <form [formGroup]="urlFormation"  role="urlFormation" 
+      (ngSubmit)="saveForm(urlFormation)">
+        <div>
+          <input mdbInput type="text" 
+          class="form-control hi"
+          id="url" 
+          name="url"
+          placeholder="Url..." 
+          formControlName="url"
+          [class.is-invalid]="(urlFormation.get('url')?.touched || urlFormation.get('url')?.dirty) && urlFormation.get('url')?.invalid
+     
+          ">
+           <span class="invalid-feedback"
+             *ngIf="(urlFormation.get('url')?.touched || urlFormation.get('url')?.dirty) && urlFormation.get('url')?.invalid">
+            Please enter valid url
+     
+           </span>
+        </div>
+        <button [disabled]="!urlFormation.valid">Cancle</button>
+      </form>
+     
+    </div>
+
+
+
+	</div>
+
+</div>
