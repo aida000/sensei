@@ -1,40 +1,86 @@
-
-
 <div class="modal">
-	<div class="modelHeader">
-		<img src="./assets/img/second-block/blue_tree.png" alt=""	class="cover-bg">
-     
-   <h1 class="firstHeader">Add formations you followed</h1>
-   
-	</div>
-	<div class="defoultImage">
-		<div class="defImg"><img src="./assets/img/books/defimage.png"></div>
+  <div class="modelHeader">
+    <img
+      src="./assets/img/second-block/blue_tree.png"
+      alt=""
+      class="cover-bg"
+    />
+
+    <h1 class="firstHeader">Add formations you followed</h1>
+  </div>
+  <div class="defoultImage">
+    <div class="defImg"><img src="./assets/img/books/defimage.png" /></div>
     <div class="info">
-      <form [formGroup]="urlFormation"  role="urlFormation" 
-      (ngSubmit)="saveForm(urlFormation)">
-        <div>
-          <input mdbInput type="text" 
-          class="form-control hi"
-          id="url" 
-          name="url"
-          placeholder="Url..." 
-          formControlName="url"
-          [class.is-invalid]="(urlFormation.get('url')?.touched || urlFormation.get('url')?.dirty) && urlFormation.get('url')?.invalid
-     
-          ">
-           <span class="invalid-feedback"
-             *ngIf="(urlFormation.get('url')?.touched || urlFormation.get('url')?.dirty) && urlFormation.get('url')?.invalid">
-            Please enter valid url
-     
-           </span>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-group">
+          <div>
+            <input
+              formControlName="url"
+              id="url"
+              name="url"
+              type="text"
+              class="form-control"
+              placeholder="Link of the formation"
+            />
+
+            <div *ngIf="url?.invalid && url?.touched" class="alert">
+              <div *ngIf="url?.errors?.['required']">Please provide url.</div>
+
+              <div *ngIf="url?.errors?.['pattern']">
+                Please enter valid url.
+              </div>
+            </div>
+          </div>
+
+          <div
+            *ngIf="(!url?.errors?.['required'] && !url?.errors?.['pattern'] && !form.valid)"
+          >
+            <input
+              formControlName="formName"
+              id="formName"
+              name="formName"
+              type="text"
+              class="form-control"
+              placeholder="Formation name"
+            />
+
+            <div *ngIf="formName?.invalid && formName?.touched" class="alert">
+              <div *ngIf="formName?.errors?.['required']">
+                Please provide formName.
+              </div>
+
+              <div *ngIf="formName?.errors?.['pattern']">
+                Please enter valid formName.
+              </div>
+            </div>
+          </div>
+
+          <div
+            *ngIf="(!url?.errors?.['required'] && !url?.errors?.['pattern'] && !form.valid)"
+          >
+            <input
+              formControlName="author"
+              id="author"
+              name="author"
+              type="text"
+              class="form-control"
+              placeholder="Realised by"
+            />
+
+            <div *ngIf="author?.invalid && author?.touched" class="alert">
+              <div *ngIf="author?.errors?.['required']">
+                Please provide author.
+              </div>
+
+              <div *ngIf="author?.errors?.['pattern']">
+                Please enter valid author.
+              </div>
+            </div>
+          </div>
         </div>
-        <button [disabled]="!urlFormation.valid">Cancle</button>
       </form>
-     
     </div>
+  </div>
 
-
-
-	</div>
-
+  <button class="btnCancle" [disabled]="!form.valid">Cancle</button>
 </div>

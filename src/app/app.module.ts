@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { CustomFormsModule } from 'ng2-validation';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     ReactiveFormsModule,
-    BrowserModule
+    BrowserModule,
+    CustomFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,38 +1,99 @@
-.modal{
-    width: 50%;
-    margin: 0 auto;
-    background-color: #441d7a;
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 850px;
+  max-height: 90vh;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 0 16px 0 rgb(25 3 44 / 89%);
+  border: 1px solid #18032b;
+  background-image: linear-gradient(to bottom, #3c2373, #5b0c8f);
+  overflow: hidden;
+  margin: 0 auto;
+
 }
-.modelHeader{
-    position: relative;
-}
-.cover-bg{
-    width: 100%;
-}
-.firstHeader{
-    position: absolute;
-    top: 30px;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+.modelHeader {
+  position: relative;
+  height: 145px;
+  width: 100%;
 }
 
-.defImg>img{
-    width: 65%;
+.cover-bg {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
-.defoultImage{
-    display: flex;
-    align-items: center;
-    padding: 71px;
-    justify-content: center;
+.firstHeader {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max-content;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #fff;
 }
-.hi{
+.defImg {
+  flex: 1;
+}
+.info{
+    flex: 2;
+}
+
+.defImg > img {
+  width: 100%;
+}
+.defoultImage {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  gap: 47px;
+}
+.form-control {
     font-family: "Raleway";
     font-size: 12px;
-    width: 100%;
-    padding: 17px 20px;
+    border: none;
+    outline: none;
+    padding: 17px 0;
     border-radius: 6px;
     color: #fff;
     background-color: rgba(255, 255, 255, 0.18);
+    width: 100%;
+    text-indent: 20px;
+}
+.invalid-feedback {
+  position: absolute;
+  left: 0;
+  color: red;
+  font-size: 12px;
+}
 
+.inputUrl {
+  position: relative;
+}
+
+.alert{
+    position: absolute;
+    color: red;
+}
+input::placeholder{
+    color: #fff;
+}
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.btnCancle{
+    min-width: max-content;
+    color: #ff297a;
+    margin-right: 16px;
+    background: transparent;
+    font-size: 14px;
+    padding: 15px 45px;
+    border-radius: 22px;
+    border: 1px solid #ff297a;
 }
