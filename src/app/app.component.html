@@ -33,7 +33,7 @@
           </div>
 
           <div
-            *ngIf="(!url?.errors?.['required'] && !url?.errors?.['pattern'] && !form.valid)"
+            *ngIf="(!url?.errors?.['required'] && !url?.errors?.['pattern'] && !urlValid)"
           >
             <input
               formControlName="formName"
@@ -42,21 +42,28 @@
               type="text"
               class="form-control"
               placeholder="Formation name"
+              #input1
+              (keydown.enter)="checkInputs(input1.value)"
+              maxlength="26"
             />
 
             <div *ngIf="formName?.invalid && formName?.touched" class="alert">
               <div *ngIf="formName?.errors?.['required']">
-                Please provide formName.
+                Please provide title
               </div>
 
-              <div *ngIf="formName?.errors?.['pattern']">
-                Please enter valid formName.
+              <div
+                *ngIf="
+                  formName?.touched && this.form.value.formName.length >= 25
+                "
+              >
+                Must be 25 characters maximum
               </div>
             </div>
           </div>
 
           <div
-            *ngIf="(!url?.errors?.['required'] && !url?.errors?.['pattern'] && !form.valid)"
+            *ngIf="(!url?.errors?.['required'] && !url?.errors?.['pattern'] && !urlValid)"
           >
             <input
               formControlName="author"
@@ -77,10 +84,48 @@
               </div>
             </div>
           </div>
+          <div
+            *ngIf="(!url?.errors?.['required'] && !url?.errors?.['pattern'] && !urlValid)"
+          >
+            <p class="titleBold">Power of this experience for you</p>
+            <div class="item">
+              <img
+                class="fire"
+                [style]="fire == 1 && activeFire ? 'opacity:1' : ''"
+                src="./assets/img/general/fire1.png"
+                alt="fire 1"
+                (click)="fireImg(1)"
+              />
+              <img
+                class="fire"
+                [style]="fire == 2 && activeFire ? 'opacity:1' : ''"
+                src="./assets/img/general/fire2.png"
+                alt="fire 2"
+                (click)="fireImg(2)"
+              />
+              <img
+                class="fire"
+                [style]="fire == 3 && activeFire ? 'opacity:1' : ''"
+                src="./assets/img/general/fire3.png"
+                alt="fire 3"
+                (click)="fireImg(3)"
+              />
+            </div>
+          </div>
         </div>
       </form>
     </div>
   </div>
-
-  <button class="btnCancle" [disabled]="!form.valid">Cancle</button>
+  <div class="buttons">
+    <button class="btnCancle">Cancel</button>
+    <button
+      *ngIf="(!url?.errors?.['required'] && !url?.errors?.['pattern'] && !urlValid)"
+      class="btnAdd"
+      [style]="form.invalid || !fire ? 'opacity:0.5' : ''"
+      [disabled]="form.invalid || !fire"
+      (click)="addToList()"
+    >
+      Add "{{ this.form.value.formName }}"
+    </button>
+  </div>
 </div>
