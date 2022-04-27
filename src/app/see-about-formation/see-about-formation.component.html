@@ -1,0 +1,39 @@
+<div *ngFor="let item of arr" class="">
+  <div *ngIf="item.id == this.aboutItem" class="flex">
+    <div class="image">
+      <img src="{{ item.img }}" alt="" />
+      <p>{{ item.formName }}</p>
+    </div>
+    <div class="info">
+      <div>
+        <p class="title margin">{{ item.formName }}</p>
+        <p class="author">{{ item.author }}</p>
+      </div>
+      <div>
+        <p>URL:</p>
+        <a href="{{ item.url }}" class="link">{{ item.url }}</a>
+      </div>
+      <div>
+        <p class="margin">Power of this experience</p>
+        <img
+          *ngIf="item.fire == 3"
+          class="fire3"
+          src="./assets/img/general/fire3.png"
+          alt="fire 3"
+        />
+        <img
+          *ngIf="item.fire == 2"
+          class="fire2"
+          src="./assets/img/general/fire2.png"
+          alt="fire 2"
+        />
+        <img
+          *ngIf="item.fire == 1"
+          class="fire1"
+          src="./assets/img/general/fire1.png"
+          alt="fire 1"
+        />
+      </div>
+    </div>
+  </div>
+</div>

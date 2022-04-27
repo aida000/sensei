@@ -1,0 +1,30 @@
+.parent {
+  display: flex;
+  gap: 17px;
+  margin-top: 49px;
+}
+img {
+  width: 110px;
+  box-shadow: 0 0 10px 0;
+  border-radius: 10px;
+}
+
+p {
+  position: absolute;
+  top: 99px;
+  left: 0;
+  right: 0;
+  padding: 0 10px;
+  word-break: break-word;
+  text-align: center;
+}
+.formDiv {
+  position: relative;
+  transition: 0.5s;
+}
+
+.formDiv:hover {
+  transform: translate(0, -15px);
+  transition: 0.5s;
+  cursor: pointer;
+}

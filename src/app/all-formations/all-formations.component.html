@@ -1,0 +1,6 @@
+<div class="parent">
+  <div *ngFor="let e of arr" class="formDiv" (click)="seeMore(e.id)">
+    <img src="{{ e.img }}" alt="" />
+    <p>{{ e.formName }}</p>
+  </div>
+</div>

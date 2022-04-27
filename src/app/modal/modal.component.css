@@ -1,0 +1,134 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 850px;
+  max-height: 90vh;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 0 16px 0 rgb(25 3 44 / 89%);
+  border: 1px solid #18032b;
+  background-image: linear-gradient(to bottom, #3c2373, #5b0c8f);
+  overflow: hidden;
+  margin: 0 auto;
+}
+.modelHeader {
+  position: relative;
+  height: 145px;
+  width: 100%;
+}
+
+.cover-bg {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.firstHeader {
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max-content;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #fff;
+}
+.defImg {
+  flex: 1;
+}
+.info {
+  flex: 2;
+}
+
+.defImg > img {
+  width: 100%;
+}
+.defoultImage {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  gap: 47px;
+}
+.form-control {
+  font-family: "Raleway";
+  font-size: 12px;
+  border: none;
+  outline: none;
+  padding: 17px 0;
+  border-radius: 6px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.18);
+  width: 100%;
+  text-indent: 20px;
+}
+.invalid-feedback {
+  position: absolute;
+  left: 0;
+  color: red;
+  font-size: 12px;
+}
+
+.inputUrl {
+  position: relative;
+}
+
+.alert {
+  position: absolute;
+  color: red;
+}
+input::placeholder {
+  color: #fff;
+}
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btnCancle,
+.btnAdd {
+  min-width: max-content;
+  color: #ff297a;
+  margin-right: 16px;
+  background: transparent;
+  font-size: 14px;
+  padding: 15px 45px;
+  border-radius: 22px;
+  border: 1px solid #ff297a;
+}
+.buttons {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.btnAdd {
+  color: #fff;
+  background-color: #ff297a;
+}
+.btnAdd:hover {
+  cursor: pointer;
+}
+.btnCancle {
+  cursor: pointer;
+}
+.titleBold {
+  font-size: 18px;
+  margin-bottom: 7px;
+  font-family: "RalewayBold";
+  color: white;
+}
+
+.item {
+  display: flex;
+
+  gap: 20px;
+}
+.fire {
+  height: 29px;
+  opacity: 0.5;
+}
+.fire:hover {
+  cursor: pointer;
+}

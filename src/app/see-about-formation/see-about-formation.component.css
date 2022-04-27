@@ -1,0 +1,62 @@
+.flex {
+  display: flex;
+  padding: 75px;
+  gap: 82px;
+  background-color: #380b60;
+  margin-top: 88px;
+}
+.image > p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  word-break: break-word;
+  padding: 7px 27px;
+  text-align: center;
+  bottom: 50px;
+}
+.image {
+  position: relative;
+}
+
+.image > img {
+  width: 255px;
+  box-shadow: 0 0 10px 0;
+  border-radius: 10px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+}
+.title {
+  color: white;
+  font-family: "RalewayBold";
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.margin {
+  margin-bottom: 9px;
+}
+.author {
+  font-family: "RalewayBold";
+  font-size: 14px;
+  line-height: 1.3;
+  color: #05d0f0;
+}
+.link {
+  color: white;
+  text-decoration: none;
+}
+.fire1 {
+  height: 27px;
+  width: 22px;
+}
+.fire2 {
+  height: 25px;
+  width: 35px;
+}
+.fire3 {
+  height: 26px;
+  width: 49px;
+}
